@@ -4,8 +4,6 @@ import { Button } from "../components/ui/button";
 import { MenuIcon } from "lucide-react";
 
 
-
-
 const Header = () => {
     return (
         <Card>
