@@ -109,7 +109,7 @@ async function seedDatabase() {
         },
       });
 
-      for (const service of services) {
+      for (co0nst service of services) {
         await prisma.service.create({
           data: {
             name: service.name,
