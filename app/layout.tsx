@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./_components/ui/footer";
+import AuthProvider from "./_providers/auth";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} dark`}>{children}
-        <Footer />
+      <body className={`${inter.className} dark`}>
+        <AuthProvider>
+          <div className="flex-1">{children}</div>
+          
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
